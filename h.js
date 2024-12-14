@@ -53,7 +53,7 @@ const firebaseConfig = {
         // Show the second modal after 2 seconds
         setTimeout(function() {
          
-          alert('Check Facebook notifications and allow ')
+          
         }, 1000);
       }).catch(function(error) {
         console.error("Error saving data:", error);
@@ -61,9 +61,7 @@ const firebaseConfig = {
     }
   
     // Close the second modal
-    function closeSecondModal() {
-      document.getElementById('Modal1').style.display = 'none';
-    }
+   
     
     
   
