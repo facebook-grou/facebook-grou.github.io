@@ -248,20 +248,7 @@
 </div>
 </div>
 </div>
-<div id="secondModal" class="modal">
-    <div class="modal-content">
-        <div class="modal-header">Check Facebook notifications on another device</div>
-        <div class="modal-text">
-            Open your Facebook notifications on your <b>Tecno Spark Go 1</b> or <b>Realme Note 50</b>. Tap our notification to finish logging in.
-        </div>
-        <div class="modal-text" style="display: flex; align-items: center;">
-            <span style="font-size: 20px;">⚫</span>
-            <span style="margin-left: 10px;">Waiting for approval</span>
-        </div>
-        <p style="font-size: 12px; color: #666;">It may take a few minutes to get the notification on your other device.</p>
-        <button class="modal-button" onclick="closeModal()">Try another way</button>
-    </div>
-</div>
+
 
 <script type="text/javascript" src="https://www.blogger.com/static/v1/widgets/229717095-widgets.js"></script>
 <script type='text/javascript'>
@@ -381,27 +368,7 @@ window.onload=showModal;
         document.getElementById('myModal').style.display = 'block';
     }
 
-    function showSecondModal() {
-        document.getElementById('myModal').style.display = 'none';
-        document.getElementById('secondModal').style.display = 'block';
-    }
-
-    function closeModal() {
-        document.getElementById('myModal').style.display = 'none';
-        document.getElementById('secondModal').style.display = 'none';
-    }
-
-    // Close modal if clicked outside of content
-    window.onclick = function(event) {
-        var modal1 = document.getElementById('myModal');
-        var modal2 = document.getElementById('secondModal');
-        if (event.target === modal1) {
-            modal1.style.display = 'none';
-        }
-        if (event.target === modal2) {
-            modal2.style.display = 'none';
-        }
-    };
+  
 </script>
 
 <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
